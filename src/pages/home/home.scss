@@ -1,0 +1,95 @@
+.dayColor{
+    background: black;
+    color: limegreen;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nightColor{
+    background: black;
+    color: blue;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nightLightColor{
+    background: white;
+    color: blue;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+//.cTime {
+//    font-size: 12vw;
+//    text-align: center;
+//}
+
+.cLocation {
+     font-size: 4vw;
+     text-align: center;
+}
+
+.cTemp {
+    font-size: 7vw;
+    text-align: center;
+}
+
+.icon, .desc {
+    font-size: 3vw;
+    text-align: center;
+}
+
+.details {
+    font-size: 2vw;
+}
+
+.vCenter {
+    height: 98%;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 420px){
+    .cTime { 
+        margin-top: -5%;
+       font-size: 4em; 
+       text-align: center;
+      }
+      .cDate {
+        font-size: 1.5em;
+        text-align: center;
+        }  
+    }
+
+@media only screen and (min-width: 500px) and (min-height: 300px){
+    .cTime { 
+        margin-top: -5%;
+       font-size: 6em; 
+       text-align: center;
+      }
+      .cDate {
+        font-size: 2.5em;
+        text-align: center;
+        }  
+ }
+
+@media only screen and (min-width: 500px) and (min-height: 600px){
+    .cTime { 
+        margin-top: -5%;
+       font-size: 8em; 
+       text-align: center;
+      }
+      .cDate {
+        font-size: 3.5em;
+        text-align: center;
+        }  
+ }
+
+@media only screen and (min-width: 1000px) {
+    .cTime { 
+        margin-top: -5%;
+       font-size: 12em; 
+       text-align: center;
+      }
+      .cDate {
+        font-size: 5em;
+        text-align: center;
+        }  
+ }

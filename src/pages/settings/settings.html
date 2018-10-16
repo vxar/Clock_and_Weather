@@ -1,0 +1,59 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <form (ngSubmit)="saveForm()">
+            <ion-list-header>
+              <h1>Location</h1>
+            </ion-list-header>
+            <ion-item>
+              <ion-label fixed>City</ion-label>
+              <ion-input [(ngModel)]="settingsData.city" name="city" type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label fixed>State</ion-label>
+              <ion-input [(ngModel)]="settingsData.state" name="state" type="text"></ion-input>
+            </ion-item>
+            <h1></h1>
+            <ion-list radio-group [(ngModel)]="settingsData.units" name="units">
+              <ion-list-header>
+                <h1>Units</h1>
+              </ion-list-header>
+              <ion-item>
+                <ion-label fixed>Celcius</ion-label>
+                <ion-radio value="C" name="unitsC"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label fixed>Fareinheit</ion-label>
+                <ion-radio value="F" name="unitsF"></ion-radio>
+              </ion-item>
+              <ion-list-header>
+                <h1>Automatic settings</h1>
+              </ion-list-header>
+              <ion-item>
+                <ion-label>Automatic night mode</ion-label>
+                <ion-toggle [(ngModel)]="settingsData.autoNightMode" name="autoNightMode"></ion-toggle>
+              </ion-item>
+              <ion-item>
+                <ion-label>Automatic night light mode</ion-label>
+                <ion-toggle [(ngModel)]="settingsData.autoNightLight" name="autoNightLight"></ion-toggle>
+              </ion-item>
+            </ion-list>
+            <button ion-button type="submit" block>Save</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" [ngClass]="homeColor">
+    <ion-grid *ngIf="weather" class="vCenter">
+        <ion-row>
+          <ion-col>
+            <div class="cTime">{{currentTime}}</div>
+            <div class="cDate">{{currentDate}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <br>
+          <br>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="cTemp">{{weather.temp}}&deg; {{weather.unit}}</div>
+            <div class="desc">{{weather.condition.text}}</div>
+            <div class="desc">Feels like {{weather.feelslike}}&deg; {{weather.unit}}</div>
+          </ion-col>
+          <ion-col>
+            <div class="icon">
+              <img src="{{weather.condition.icon}}" alt="" width="60%">
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="details">
+              <br>
+              {{weather.humidity_txt}}<br>
+              Wind {{weather.wind}}, direction {{weather.wind_dir}}<br>
+              {{weather.vis_txt}} visibility [{{weather.vis}}]
+            
+          </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="cLocation">{{wLocation.name}} {{wLocation.region}} {{wLocation.country}}</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>
